@@ -1,1 +1,13 @@
 __pycache__
+*.mp4
+*.avi
+*.mkv
+*.mov
+*.flv
+*.json
+*.log
+*.log
+*.wandb
+*.yaml
+*.txt
+latest-run
