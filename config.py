@@ -100,8 +100,8 @@ A2C_CONFIG = {
 
 SAC_CONFIG = {
     "default": {
-        "Gamma": 0.99,
-        "Actor LR": 0.0005,
+        "Gamma": 0.999,
+        "Actor LR": 0.0004,
         "Critic 1 LR": 0.001,
         "Critic 2 LR": 0.001,
         "Entropy Coef": 0.01,
@@ -109,7 +109,7 @@ SAC_CONFIG = {
         "Training Episodes": 500
     },
     "CartPole-v1": {
-        "Gamma": 0.99,
+        "Gamma": 0.999,
         "Actor LR": 0.0004,
         "Critic 1 LR": 0.001,
         "Critic 2 LR": 0.001,

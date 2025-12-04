@@ -9,7 +9,9 @@ from utils.defs import Transition
 # SAC Agent Implementation
 class SACAgent:
 
-    def __init__(self, state_dim, action_dim, hidden_dim, gamma, actor_lr, critic1_lr, critic2_lr, entropy_coef):
+    def __init__(self, state_dim, action_dim, hidden_dim, gamma,
+                 actor_lr, critic1_lr, critic2_lr, entropy_coef, n_steps=5):
+        
         self.state_dim = state_dim
         self.action_dim = action_dim
         self.hidden_dim = hidden_dim
@@ -28,7 +30,10 @@ class SACAgent:
         self.critic2_lr = critic2_lr
         self.entropy_coef = entropy_coef
 
-        self.memory = list()
+        self.n_steps = n_steps    # ❗ REQUIRED for training loop
+
+        self.memory = []
+
     
     def select_action(self, state):
         state = torch.FloatTensor(state).unsqueeze(0)
